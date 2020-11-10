@@ -1,0 +1,44 @@
+replicaCount: 1
+
+image:
+  repository: inlets/inlets-pro
+  pullPolicy: IfNotPresent
+  tag: "0.7.2"
+
+## inlets token using existing secret
+## existingSecret: secret  
+
+token: inletstoken
+autoTLS: true
+
+commonName: ""
+
+splitPlaneEnabled: false
+
+controlService:
+  type: ClusterIP
+  port: 8123
+  annotations: {}
+
+dataService:
+  type: ClusterIP
+  ports: []
+  annotations: {}
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
